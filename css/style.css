@@ -185,7 +185,7 @@ section {
   height: 100vh;
 }
 section#main {
-  background: url(/images/sky.png) no-repeat center/cover;
+  background: url(../images/sky.png) no-repeat center/cover;
 }
 section#main .inner {
   position: relative;
