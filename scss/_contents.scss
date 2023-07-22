@@ -1,30 +1,32 @@
+// sass --watch scss/style.scss css/style.css
+
 // style 변수지정
 $inner : 40px;
-$txt : #401600;
+$txt : #1a1b1c;
 
-section#main {
-	// background: url(/images/sky.png) no-repeat center / cover;
-	background: url(/images/sky2.png) no-repeat center / cover;
+@mixin tit {
+	position: absolute;
+	top: 140px;
+	left: $inner;
+
+	h2 {
+		font: 80px/1 'Carter One', sans-serif;
+		color: #ff5900;
+	}
 }
 
-section#about {
-	// background-color: pink;
+
+section#portfolio {
+	background-color: hwb(40 88% 0% / 0.557);
 }
 
-section#contents {
-	background-color: orange;
-}
-
-section#contact {
-	background-color: steelblue;
-}
 
 section {
 	width: 100%;
 	height: 100vh;
 
 	&#main {
-		display: none;
+		background: url(/images/sky.png) no-repeat center / cover;
 
 		.inner {
 			position: relative;
@@ -65,17 +67,11 @@ section {
 	&#about {
 
 		.inner {
+
 			padding: $inner;
 
 			.tit {
-				position: absolute;
-				top: 140px;
-				left: $inner;
-
-				h2 {
-					font: 80px/1 'Carter One', sans-serif;
-					color: #ff5900;
-				}
+				@include tit;
 			}
 
 			.profile {
@@ -90,8 +86,11 @@ section {
 						overflow: hidden;
 						width: 100%;
 						max-width: 400px;
+						height: 100%;
+						max-height: 514px;
 						margin-right: 60px;
 						border-radius: 20px;
+						box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
 					}
 				}
 
@@ -115,7 +114,7 @@ section {
 						div {
 							span {
 								margin-right: 10px;
-								font: bold 18px/1 'Noto Sans KR', sans-serif;
+								font: bold 18px/1 'Rajdhani', sans-serif;
 								color: #ff5900;
 							}
 
@@ -133,9 +132,156 @@ section {
 		}
 	}
 
+	&#skill {
+		.inner {
+			padding: $inner;
 
+			.tit {
+				@include tit;
+			}
 
-	&#about {}
+			.skill_box {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				width: 100%;
+				margin-top: 180px;
+				// transform: translateY(10%);
 
-	&#about {}
+				li {
+					width: calc((100% - 60px)/4);
+					height: auto;
+					margin: 0 40px 40px 0;
+					padding: 40px;
+					font: 16px/2.5 'Orbitron', sans-serif;
+					color: $txt;
+					background-color: #fff0d0;
+					box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
+					border-radius: 20px;
+
+					&:nth-child(3n),
+					&:nth-child(5n) {
+						margin-right: 0;
+					}
+
+					i {
+						margin-right: 5px;
+						font-size: 20px;
+					}
+
+					strong {
+						color: #222;
+					}
+
+					p {
+						margin-top: 15px;
+						font-family: 'Noto Sans KR', sans-serif;
+						;
+						word-break: keep-all;
+					}
+				}
+			}
+
+		}
+	}
+
+	&#portfolio {
+		.inner {
+			padding: $inner;
+
+			.tit {
+				@include tit;
+			}
+
+			.port_box {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+				width: 100%;
+				margin-top: 140px;
+
+				li {
+					overflow: hidden;
+					position: relative;
+					width: calc((100% - 60px)/4);
+					height: 320px;
+					margin-right: 40px;
+					padding: 10px;
+					color: $txt;
+					background-color: #fff;
+					box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
+					border-radius: 20px;
+					cursor: pointer;
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+
+					&:hover .hover {
+						opacity: 0.9;
+					}
+
+					figure {
+						img {
+							display: block;
+							transform: translateY(35px);
+							transition: all .3s;
+						}
+					}
+
+					.hover {
+						opacity: 0;
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100%;
+						height: 100%;
+						padding: $inner;
+						text-align: center;
+						color: #fff;
+						background-color: #2e2e2ee1;
+						transition: all .3s;
+
+						.inner {
+							h3 {
+								margin-bottom: 30px;
+								font: bold 26px/1 'Noto Sans KR', sans-serif;
+
+								span {
+									display: block;
+									font: normal 18px/1 'Noto Sans KR', sans-serif;
+									;
+									margin-bottom: 10px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.btn {
+				margin-top: 80px;
+				text-align: center;
+
+				a {
+					display: inline-block;
+					padding: 20px 40px;
+					font: bold 20px/1 'Rajdhani', sans-serif;
+					;
+					color: #fff;
+					background-color: #ff5900;
+					border-radius: 10px;
+					transition: all 0.3s ease;
+
+					&:hover {
+						background-color: orangered;
+						box-shadow: 0 2px 25px rgba(255, 95, 37, 0.653);
+					}
+				}
+			}
+		}
+	}
 }

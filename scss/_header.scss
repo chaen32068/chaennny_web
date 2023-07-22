@@ -1,3 +1,20 @@
+#skip_navi a {
+  position: fixed;
+  top: -999px;
+  left: 0;
+  width: 100%;
+  padding: 18px 0;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ff4400;
+  z-index: 20;
+
+  &:focus {
+    top: 0
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -7,14 +24,15 @@ header {
   align-items: center;
   width: 100%;
   padding: 10px 40px;
-  background-color: rgba(255, 166, 0, 0.586);
-
+  z-index: 19;
+  
   &.on {
+    // background-color: rgba(255, 166, 0, 0.586);
     background-color: rgba(255, 68, 0, 0.552);
   }
 
   .logo {
-    width: 200px;
+    width: 150px;
   }
 
   nav {
@@ -25,7 +43,7 @@ header {
       display: block;
       margin-right: 25px;
       padding: 7px;
-      font: 600 25px/1 sans-serif;
+      font: 600 25px/1 'Gowun Dodum', sans-serif;
 
       &:last-child {
         margin-right: 0;

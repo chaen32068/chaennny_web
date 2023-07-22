@@ -12,8 +12,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   box-sizing: border-box;
 }
 
-body {scroll-behavior: smooth;background-color: rgba(243, 234, 229, 0.532);}
-
 li { list-style:none; }
 img,fieldset,iframe{border:0;}
 img{max-width:100%; }
@@ -31,3 +29,26 @@ label {cursor:pointer;}
 
 button {outline: none;border: 0;background: 0;}
 .clearfix::before, .clearfix::after {content: ""; display: block; clear: both;line-height: 0;}
+
+
+// basic style
+.body {/* scroll-behavior: smooth; */background-color: rgba(255, 235, 224, 0.532);}
+
+// scrollbar redesign
+::-webkit-scrollbar {width: 15px;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 3px #ccc;}
+::-webkit-scrollbar-thumb {background: #ffd8d9;border-radius: 10px;}
+::selection {color: #fff;background: #eb1f48;}
+
+// fullpage nav
+#fp-nav ul li, .fp-slidesNav ul li {margin: 10px 7px;}
+#fp-nav ul li .fp-tooltip.fp-right {right: 30px;}
+#fp-nav ul li .fp-tooltip {font : bold 16px/1 'Rajdhani', sans-serif;color: orange;}
+#fp-nav ul li a span {transform: scale(1.4);background: orangered;}
+
+// font
+// font-family: 'Carter One', cursive;
+// font-family: 'Gowun Dodum', sans-serif;
+// font-family: 'Noto Sans KR', sans-serif;
+// font-family: 'Orbitron', sans-serif;
+// font-family: 'Rajdhani', sans-serif;

@@ -15,10 +15,10 @@ window.onscroll = function () {
 new fullpage("#fullpage", {
   //이동
   lockAnchors: true,
-  anchors: ["main", "About", "Porfolio", "contact"],
+  anchors: ["main", "About", "skill", "portfolio", "contact",],
   navigation: true,
   navigationPosition: "right",
-  navigationTooltips: ["main", "About", "Porfolio", "contact"],
+  navigationTooltips: ["main", "About", "skill", "portfolio", "contact"],
   // slidesNavigation: false,
   // slidesNavPosition: "bottom",
 
@@ -28,10 +28,9 @@ new fullpage("#fullpage", {
   autoScrolling: true,
   fitToSection: true,
   fitToSectionDelay: 1000,
-  scrollBar: false,
   scrollBar: true,
   showActiveTooltip: true,
-  menu: 'nav',
+  menu: ".nav",
   easing: "easeInOutCubic",
   easingcss3: "ease",
   loopBottom: false,
@@ -88,21 +87,12 @@ new fullpage("#fullpage", {
 });
 
 
-
 //top button
-// $('#top').on('click', function () {
-//   $('body').stop().animate({
-//     scrollTop: 0
-//   }, 500)
-// })
-
-//스크롤, 메뉴
-// $('#fullpage').fullpage({
-//   navigation: true,
-//   navigationTooltips: ['main', 'me', 'sns', 'page', 'bnr', 'card news'],
-//   sectionsColor: ['#222'],
-//   scrollBar: true,
-//   showActiveTooltip: true,
-//   menu: 'nav',
-//   anchors: ['a', 'b', 'c', 'd', 'e', 'f']
-// })
+$('#top').on('click', function () {
+  $("html,body").stop().animate(
+    {
+      scrollTop: 0,
+    },
+    500
+  );
+});
