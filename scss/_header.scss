@@ -1,0 +1,35 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 40px;
+  background-color: rgba(255, 166, 0, 0.586);
+
+  &.on {
+    background-color: rgba(255, 68, 0, 0.552);
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  nav {
+    display: flex;
+    color: #fff;
+
+    a {
+      display: block;
+      margin-right: 25px;
+      padding: 7px;
+      font: 600 25px/1 sans-serif;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+// style 변수지정
+$inner : 40px;
+$txt : #401600;
+
+section#main {
+	// background: url(/images/sky.png) no-repeat center / cover;
+	background: url(/images/sky2.png) no-repeat center / cover;
+}
+
+section#about {
+	// background-color: pink;
+}
+
+section#contents {
+	background-color: orange;
+}
+
+section#contact {
+	background-color: steelblue;
+}
+
+section {
+	width: 100%;
+	height: 100vh;
+
+	&#main {
+		display: none;
+
+		.inner {
+			position: relative;
+
+			.tit {
+				font: 25px/1.5 'Gowun Dodum', sans-serif;
+				text-align: center;
+
+				b {
+					margin-right: 5px;
+					font-size: 45px;
+					color: #e5474b;
+				}
+
+				.emogi {
+					display: inline-block;
+					font-size: 60px;
+					animation: shake 1.2s infinite;
+				}
+
+				@keyframes shake {
+					0% {
+						transform: rotate(20deg);
+					}
+
+					50% {
+						transform: rotate(30deg)
+					}
+
+					100% {
+						transform: rotate(20deg);
+					}
+				}
+			}
+		}
+	}
+
+	&#about {
+
+		.inner {
+			padding: $inner;
+
+			.tit {
+				position: absolute;
+				top: 140px;
+				left: $inner;
+
+				h2 {
+					font: 80px/1 'Carter One', sans-serif;
+					color: #ff5900;
+				}
+			}
+
+			.profile {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transform: translateY(15%);
+
+				.visual {
+
+					figure {
+						overflow: hidden;
+						width: 100%;
+						max-width: 400px;
+						margin-right: 60px;
+						border-radius: 20px;
+					}
+				}
+
+				.text {
+					width: 100%;
+					max-width: 600px;
+
+					p {
+						word-break: keep-all;
+						font: 24px/2 'Noto Sans KR', sans-serif;
+						color: $txt;
+
+						&+p {
+							margin-top: 20px;
+						}
+					}
+
+					.link {
+						margin-top: 40px;
+
+						div {
+							span {
+								margin-right: 10px;
+								font: bold 18px/1 'Noto Sans KR', sans-serif;
+								color: #ff5900;
+							}
+
+							a {
+								color: #aaa;
+							}
+
+							&+div {
+								margin-top: 20px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+	&#about {}
+
+	&#about {}
+}

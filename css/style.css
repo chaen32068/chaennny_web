@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;500&family=Orbitron&family=Rajdhani:wght@300&display=swap");
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img,
+ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: rgba(243, 234, 229, 0.532);
+}
+
+li {
+  list-style: none;
+}
+
+img, fieldset, iframe {
+  border: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+li img, dd img {
+  vertical-align: top;
+}
+
+input {
+  vertical-align: middle;
+}
+
+hr {
+  display: none;
+}
+
+hr, caption {
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  line-height: 1px;
+  visibility: hidden;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+caption {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: 0;
+}
+
+.clearfix::before, .clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  line-height: 0;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 40px;
+  background-color: rgba(255, 166, 0, 0.586);
+}
+header.on {
+  background-color: rgba(255, 68, 0, 0.552);
+}
+header .logo {
+  width: 200px;
+}
+header nav {
+  display: flex;
+  color: #fff;
+}
+header nav a {
+  display: block;
+  margin-right: 25px;
+  padding: 7px;
+  font: 600 25px/1 sans-serif;
+}
+header nav a:last-child {
+  margin-right: 0;
+}
+
+section#main {
+  background: url(/images/sky2.png) no-repeat center/cover;
+}
+
+section#contents {
+  background-color: orange;
+}
+
+section#contact {
+  background-color: steelblue;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+section#main {
+  display: none;
+}
+section#main .inner {
+  position: relative;
+}
+section#main .inner .tit {
+  font: 25px/1.5 "Gowun Dodum", sans-serif;
+  text-align: center;
+}
+section#main .inner .tit b {
+  margin-right: 5px;
+  font-size: 45px;
+  color: #e5474b;
+}
+section#main .inner .tit .emogi {
+  display: inline-block;
+  font-size: 60px;
+  animation: shake 1.2s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+section#about .inner {
+  padding: 40px;
+}
+section#about .inner .tit {
+  position: absolute;
+  top: 140px;
+  left: 40px;
+}
+section#about .inner .tit h2 {
+  font: 80px/1 "Carter One", sans-serif;
+  color: #ff5900;
+}
+section#about .inner .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15%);
+}
+section#about .inner .profile .visual figure {
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 60px;
+  border-radius: 20px;
+}
+section#about .inner .profile .text {
+  width: 100%;
+  max-width: 600px;
+}
+section#about .inner .profile .text p {
+  word-break: keep-all;
+  font: 24px/2 "Noto Sans KR", sans-serif;
+  color: #401600;
+}
+section#about .inner .profile .text p + p {
+  margin-top: 20px;
+}
+section#about .inner .profile .text .link {
+  margin-top: 40px;
+}
+section#about .inner .profile .text .link div span {
+  margin-right: 10px;
+  font: bold 18px/1 "Noto Sans KR", sans-serif;
+  color: #ff5900;
+}
+section#about .inner .profile .text .link div a {
+  color: #aaa;
+}
+section#about .inner .profile .text .link div + div {
+  margin-top: 20px;
+}
+#top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  transition: all 0.6s;
+  z-index: 10;
+}
+#top a {
+  display: block;
+}
+#top a img {
+  width: 100%;
+  height: 100%;
+}
+#top#top:hover {
+  transform: rotate(200deg);
+  transform-origin: 25px 27px;
+}
+#top#top.on {
+  right: 3%;
+  opacity: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
