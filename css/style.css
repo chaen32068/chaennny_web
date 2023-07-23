@@ -176,10 +176,6 @@ header nav a:last-child {
   margin-right: 0;
 }
 
-section#portfolio {
-  background-color: hwb(40 88% 0%/0.557);
-}
-
 section {
   width: 100%;
   height: 100vh;
@@ -314,6 +310,9 @@ section#skill .inner .skill_box li p {
   font-family: "Noto Sans KR", sans-serif;
   word-break: keep-all;
 }
+section#portfolio {
+  background-color: hwb(40 88% 0%/0.557);
+}
 section#portfolio .inner {
   padding: 40px;
 }
@@ -326,38 +325,39 @@ section#portfolio .inner .tit h2 {
   font: 80px/1 "Carter One", sans-serif;
   color: #ff5900;
 }
-section#portfolio .inner .port_box {
+section#portfolio .inner .item_cont {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
   margin-top: 140px;
 }
-section#portfolio .inner .port_box li {
+section#portfolio .inner .item_cont li {
+  width: calc((100% - 60px) / 4);
+  margin-right: 40px;
+}
+section#portfolio .inner .item_cont li:last-of-type {
+  margin-right: 0;
+}
+section#portfolio .inner .item_cont li:hover .hover {
+  opacity: 0.9;
+}
+section#portfolio .inner .item_cont li a {
   overflow: hidden;
   position: relative;
-  width: calc((100% - 60px) / 4);
-  height: 320px;
-  margin-right: 40px;
-  padding: 10px;
+  display: block;
+  padding: 40px;
   color: #1a1b1c;
   background-color: #fff;
   box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
   border-radius: 20px;
   cursor: pointer;
 }
-section#portfolio .inner .port_box li:last-of-type {
-  margin-right: 0;
-}
-section#portfolio .inner .port_box li:hover .hover {
-  opacity: 0.9;
-}
-section#portfolio .inner .port_box li figure img {
+section#portfolio .inner .item_cont li a figure img {
   display: block;
-  transform: translateY(35px);
   transition: all 0.3s;
 }
-section#portfolio .inner .port_box li .hover {
+section#portfolio .inner .item_cont li a .hover {
   opacity: 0;
   position: absolute;
   top: 0;
@@ -367,17 +367,16 @@ section#portfolio .inner .port_box li .hover {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 40px;
   text-align: center;
   color: #fff;
   background-color: rgba(46, 46, 46, 0.8823529412);
   transition: all 0.3s;
 }
-section#portfolio .inner .port_box li .hover .inner h3 {
+section#portfolio .inner .item_cont li a .hover .inner h4 {
   margin-bottom: 30px;
   font: bold 26px/1 "Noto Sans KR", sans-serif;
 }
-section#portfolio .inner .port_box li .hover .inner h3 span {
+section#portfolio .inner .item_cont li a .hover .inner h4 span {
   display: block;
   font: normal 18px/1 "Noto Sans KR", sans-serif;
   margin-bottom: 10px;
@@ -398,6 +397,62 @@ section#portfolio .inner .btn a {
 section#portfolio .inner .btn a:hover {
   background-color: orangered;
   box-shadow: 0 2px 25px rgba(255, 95, 37, 0.653);
+}
+
+.sub section#portfolio {
+  height: 100%;
+}
+.sub section#portfolio .inner .tit {
+  position: static;
+}
+.sub section#portfolio .inner .port_box {
+  margin-top: 140px;
+}
+.sub section#portfolio .inner .port_box > .tit h3 {
+  display: inline-block;
+  padding: 7px 5px;
+  font: 28px/1 "Noto Sans KR", sans-serif;
+  border-top: 2px solid #ff5900;
+  border-bottom: 2px solid #ff5900;
+}
+.sub section#portfolio .inner .port_box .item_cont {
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+.sub section#portfolio .inner .port_box .item_cont li {
+  width: calc((100% - 120px) / 3);
+  margin: 0 40px 40px 0;
+}
+.sub section#portfolio .inner .port_box .item_cont li .hover .inner h5 {
+  margin-bottom: 30px;
+  font: bold 26px/1 "Noto Sans KR", sans-serif;
+}
+.sub section#portfolio .inner .port_box .item_cont li .hover .inner h5 span {
+  display: block;
+  font: normal 18px/1 "Noto Sans KR", sans-serif;
+  margin-bottom: 10px;
+}
+.sub section#portfolio .inner .port_box .pj {
+  margin-top: 60px;
+}
+.sub section#portfolio .inner .port_box .pj + .pj {
+  margin-top: 120px;
+}
+.sub section#portfolio .inner .port_box .pj .tit h4 {
+  display: inline-block;
+  font: 24px/1 "Noto Sans KR", sans-serif;
+}
+.sub section#portfolio .inner .port_box .pj .tit h4 i {
+  color: #ff5900;
+}
+.sub section#portfolio .inner .port_box .pj .item_cont li .hover .inner h5 {
+  margin-bottom: 30px;
+  font: bold 26px/1 "Noto Sans KR", sans-serif;
+}
+.sub section#portfolio .inner .port_box .pj .item_cont li .hover .inner h5 span {
+  display: block;
+  font: normal 18px/1 "Noto Sans KR", sans-serif;
+  margin-bottom: 10px;
 }
 
 section#contact {
