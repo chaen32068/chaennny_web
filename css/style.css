@@ -349,7 +349,6 @@ section#portfolio .inner .item_cont li a {
   padding: 40px;
   color: #1a1b1c;
   background-color: #fff;
-  box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
   border-radius: 20px;
   cursor: pointer;
 }
@@ -380,6 +379,12 @@ section#portfolio .inner .item_cont li a .hover .inner h4 span {
   display: block;
   font: normal 18px/1 "Noto Sans KR", sans-serif;
   margin-bottom: 10px;
+}
+section#portfolio .inner .item_cont .txt {
+  margin-top: 20px;
+  font: 18px/1 "Noto Sans KR", sans-serif;
+  text-align: center;
+  color: rgba(46, 46, 46, 0.8823529412);
 }
 section#portfolio .inner .btn {
   margin-top: 80px;
@@ -422,6 +427,9 @@ section#portfolio .inner .btn a:hover {
 .sub section#portfolio .inner .port_box .item_cont li {
   width: calc((100% - 120px) / 3);
   margin: 0 40px 40px 0;
+}
+.sub section#portfolio .inner .port_box .item_cont li:nth-of-type(3n) {
+  margin-right: 0;
 }
 .sub section#portfolio .inner .port_box .item_cont li .hover .inner h5 {
   margin-bottom: 30px;
