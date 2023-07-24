@@ -557,10 +557,10 @@ section#portfolio .inner .btn a:hover {
   }
   section#portfolio .inner .item_cont li {
     width: 100%;
-    margin-top: 4rem;
+    margin: 4rem;
   }
   section#portfolio .inner .btn {
-    margin-top: 4rem;
+    margin: 4rem 0;
   }
   section#contact {
     padding: 4rem;
@@ -616,7 +616,6 @@ section#contact .mail {
 
 @media screen and (max-width: 640px) {
   section#contact {
-    margin-top: 2rem;
     padding: 2rem;
   }
   section#contact h4 {
