@@ -338,16 +338,18 @@ section {
 					}
 				}
 
-				.item_cont {
-					margin-top: 4rem;
+				.inner {
+					.item_cont {
+						margin-top: 4rem;
 
-					li {
-						margin-bottom: 4rem;
+						li {
+							margin-bottom: 4rem;
 
-						.hover {
-							.item_inner {
-								h5 {
-									@include hoverTxt;
+							.hover {
+								.item_inner {
+									h5 {
+										@include hoverTxt;
+									}
 								}
 							}
 						}

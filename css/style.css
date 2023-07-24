@@ -410,17 +410,17 @@ section#portfolio .inner .btn a:hover {
   border-top: 2px solid #ff5900;
   border-bottom: 2px solid #ff5900;
 }
-.sub section#portfolio .inner .port_box .item_cont {
+.sub section#portfolio .inner .port_box .inner .item_cont {
   margin-top: 4rem;
 }
-.sub section#portfolio .inner .port_box .item_cont li {
+.sub section#portfolio .inner .port_box .inner .item_cont li {
   margin-bottom: 4rem;
 }
-.sub section#portfolio .inner .port_box .item_cont li .hover .item_inner h5 {
+.sub section#portfolio .inner .port_box .inner .item_cont li .hover .item_inner h5 {
   margin-bottom: 3rem;
   font: bold 2.6rem/1 "Noto Sans KR", sans-serif;
 }
-.sub section#portfolio .inner .port_box .item_cont li .hover .item_inner h5 span {
+.sub section#portfolio .inner .port_box .inner .item_cont li .hover .item_inner h5 span {
   display: block;
   font: normal 1.8rem/1 "Noto Sans KR", sans-serif;
   margin-bottom: 1rem;
