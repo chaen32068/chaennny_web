@@ -179,6 +179,7 @@ header nav a:last-child {
 @media screen and (max-width: 1200px) {
   header {
     position: absolute;
+    padding: 10px 20px;
   }
 }
 @media screen and (max-width: 640px) {
@@ -484,7 +485,8 @@ section#portfolio .inner .btn a:hover {
     transform: inherit;
   }
   section#about .inner .profile .visual figure {
-    max-width: 30rem;
+    max-width: 23rem;
+    max-height: 29rem;
     margin-right: 0;
   }
   section#about .inner .profile .text {
