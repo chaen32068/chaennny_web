@@ -339,18 +339,16 @@ section {
 					}
 				}
 
-				.inner {
-					.item_cont {
-						margin-top: 4rem;
+				.item_cont {
+					margin-top: 4rem;
 
-						li {
-							margin-bottom: 4rem;
+					li {
+						margin-bottom: 4rem;
 
-							.hover {
-								.item_inner {
-									h5 {
-										@include hoverTxt;
-									}
+						.hover {
+							.item_inner {
+								h5 {
+									@include hoverTxt;
 								}
 							}
 						}
@@ -371,18 +369,6 @@ section {
 
 							i {
 								color: #ff5900;
-							}
-						}
-					}
-
-					.item_cont {
-						li {
-							.hover {
-								.item_inner {
-									h5 {
-										@include hoverTxt;
-									}
-								}
 							}
 						}
 					}
