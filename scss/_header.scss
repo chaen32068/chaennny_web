@@ -1,3 +1,7 @@
+//반응형
+$web : 1200px;
+$mobile : 640px;
+
 #skip_navi a {
   position: fixed;
   top: -999px;
@@ -48,6 +52,19 @@ header {
       &:last-child {
         margin-right: 0;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $web) {
+  header {
+    position: absolute;
+  }
+}
+@media screen and (max-width: $mobile) {
+  header {
+    nav {
+      display: none;
     }
   }
 }

@@ -1,7 +1,7 @@
 section#contact {
 	height: auto !important;
 	// max-height: 200px;
-	padding: 0 !important;
+	// padding: 0 !important;
 	text-align: center;
 	background-color: rgba(255, 68, 0, 0.552);
 
@@ -49,5 +49,19 @@ section#contact {
 	&#top.on {
 		right: 3%;
 		opacity: 1;
+	}
+}
+
+@media screen and (max-width: $mobile) {
+	section {
+		&#contact {
+			margin-top: 2rem;
+			padding: 2rem;
+
+			h4 {
+				font-size: 1.6rem;
+				word-break: keep-all;
+			}
+		}
 	}
 }

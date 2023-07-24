@@ -176,6 +176,16 @@ header nav a:last-child {
   margin-right: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  header {
+    position: absolute;
+  }
+}
+@media screen and (max-width: 640px) {
+  header nav {
+    display: none;
+  }
+}
 section {
   width: 100%;
   height: 100vh;
@@ -183,6 +193,13 @@ section {
 section .inner {
   height: 100%;
   padding: 4rem;
+}
+section .inner .tit {
+  margin-top: 4rem;
+}
+section .inner .tit h2 {
+  font: 8rem/1 "Carter One", sans-serif;
+  color: #ff5900;
 }
 section#main {
   background: url(../images/sky.png) no-repeat center/cover;
@@ -197,12 +214,15 @@ section#main .inner .tit {
   align-items: center;
   width: 100%;
   height: 100%;
-  font: 2.5rem/1.5 "Gowun Dodum", sans-serif;
+  margin-top: 0;
   text-align: center;
 }
-section#main .inner .tit b {
+section#main .inner .tit h2 {
+  font: 4.5rem/1.5 "Gowun Dodum", sans-serif;
+}
+section#main .inner .tit h2 b {
   margin-right: 0.5rem;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   color: #e5474b;
 }
 section#main .inner .tit .emogi {
@@ -220,13 +240,6 @@ section#main .inner .tit .emogi {
   100% {
     transform: rotate(20deg);
   }
-}
-section#about .inner .tit {
-  margin-top: 4rem;
-}
-section#about .inner .tit h2 {
-  font: 8rem/1 "Carter One", sans-serif;
-  color: #ff5900;
 }
 section#about .inner .profile {
   display: flex;
@@ -270,13 +283,6 @@ section#about .inner .profile .text .link div a {
 section#about .inner .profile .text .link div + div {
   margin-top: 2rem;
 }
-section#skill .inner .tit {
-  margin-top: 4rem;
-}
-section#skill .inner .tit h2 {
-  font: 8rem/1 "Carter One", sans-serif;
-  color: #ff5900;
-}
 section#skill .inner .skill_box {
   display: flex;
   flex-wrap: wrap;
@@ -311,13 +317,6 @@ section#skill .inner .skill_box li p {
 }
 section#portfolio {
   background-color: hwb(40 88% 0%/0.557);
-}
-section#portfolio .inner .tit {
-  margin-top: 4rem;
-}
-section#portfolio .inner .tit h2 {
-  font: 8rem/1 "Carter One", sans-serif;
-  color: #ff5900;
 }
 section#portfolio .inner .item_cont {
   display: flex;
@@ -450,18 +449,81 @@ section#portfolio .inner .btn a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-  section#portfolio .inner .port_box .item_cont {
+  section {
+    height: 100%;
+  }
+  section .inner {
+    padding: 2rem;
+  }
+  section .inner .tit {
+    margin-top: 0;
+    margin-top: 4rem;
+  }
+  section .inner .tit h2 {
+    font: 4rem/1 "Carter One", sans-serif;
+    color: #ff5900;
+  }
+  section#main {
+    height: 100vh;
+  }
+  section#main .inner .tit {
+    margin-top: 0;
+  }
+  section#main .inner .tit h2 {
+    font-size: 3rem;
+  }
+  section#main .inner .tit h2 b {
+    font-size: 4rem;
+  }
+  section#main .inner .tit .emogi {
+    font-size: 3rem;
+  }
+  section#about .inner .profile {
+    flex-flow: column;
+    margin-top: 7rem;
+    transform: inherit;
+  }
+  section#about .inner .profile .visual figure {
+    max-width: 30rem;
+    margin-right: 0;
+  }
+  section#about .inner .profile .text {
+    max-width: 60rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  section#about .inner .profile .text p {
+    font-size: 1.8rem;
+  }
+  section#about .inner .profile .text p + p {
+    margin-top: 1rem;
+  }
+  section#skill .inner .skill_box {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 7rem;
+    max-width: 160rem;
+  }
+  section#skill .inner .skill_box li {
+    width: calc((100% - 4rem) / 2);
+    margin-right: 0;
+    margin-bottom: 4rem;
+  }
+  section#skill .inner .skill_box li:nth-of-type(even) {
+    margin-right: 0;
+  }
+  section#skill .inner .skill_box li:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+  section#portfolio .inner .item_cont {
     flex-wrap: wrap;
     max-width: 1000px;
   }
-  section#portfolio .inner .port_box .item_cont li {
+  section#portfolio .inner .item_cont li {
     width: calc((100% - 4rem) / 2);
   }
   .sub section#portfolio .inner > .tit {
     margin-top: 0;
-  }
-  .sub section#portfolio .inner > .tit h2 {
-    font-size: 4rem;
   }
   .sub section#portfolio .inner .port_box {
     margin-top: 0;
@@ -483,12 +545,23 @@ section#portfolio .inner .btn a:hover {
   }
 }
 @media screen and (max-width: 640px) {
-  section#portfolio .inner .port_box .item_cont {
-    flex-flow: column;
-    max-width: 600px;
-  }
-  section#portfolio .inner .port_box .item_cont li {
+  section#skill .inner .skill_box li {
     width: 100%;
+  }
+  section#portfolio .inner .item_cont {
+    flex-wrap: wrap;
+    max-width: 60rem;
+    margin-top: 0;
+  }
+  section#portfolio .inner .item_cont li {
+    width: 100%;
+    margin-top: 4rem;
+  }
+  section#portfolio .inner .btn {
+    margin-top: 4rem;
+  }
+  section#contact {
+    padding: 4rem;
   }
   .sub section#portfolio .inner {
     padding: 2rem;
@@ -496,7 +569,6 @@ section#portfolio .inner .btn a:hover {
 }
 section#contact {
   height: auto !important;
-  padding: 0 !important;
   text-align: center;
   background-color: rgba(255, 68, 0, 0.552);
 }
@@ -540,6 +612,16 @@ section#contact .mail {
   opacity: 1;
 }
 
+@media screen and (max-width: 640px) {
+  section#contact {
+    margin-top: 2rem;
+    padding: 2rem;
+  }
+  section#contact h4 {
+    font-size: 1.6rem;
+    word-break: keep-all;
+  }
+}
 html {
   font-size: 10px;
 }

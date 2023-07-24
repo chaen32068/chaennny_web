@@ -15,6 +15,16 @@ $txt : #1a1b1c;
 	}
 }
 
+@mixin tit_mo {
+	margin-top: 4rem;
+
+	h2 {
+		font: 4rem/1 'Carter One', sans-serif;
+		color: #ff5900;
+	}
+}
+
+
 @mixin hoverTxt {
 	margin-bottom: 3rem;
 	font: bold 2.6rem/1 'Noto Sans KR', sans-serif;
@@ -35,9 +45,14 @@ section {
 	.inner {
 		height: 100%;
 		padding: $inner;
+
+		.tit {
+			@include tit;
+		}
 	}
 
 	&#main {
+
 		background: url(../images/sky.png) no-repeat center / cover;
 
 		.inner {
@@ -50,13 +65,17 @@ section {
 				align-items: center;
 				width: 100%;
 				height: 100%;
-				font: 2.5rem/1.5 'Gowun Dodum', sans-serif;
+				margin-top: 0;
 				text-align: center;
 
-				b {
-					margin-right: 0.5rem;
-					font-size: 4.5rem;
-					color: #e5474b;
+				h2 {
+					font: 4.5rem/1.5 'Gowun Dodum', sans-serif;
+
+					b {
+						margin-right: 0.5rem;
+						font-size: 5.5rem;
+						color: #e5474b;
+					}
 				}
 
 				.emogi {
@@ -86,9 +105,9 @@ section {
 
 		.inner {
 
-			.tit {
-				@include tit;
-			}
+			// .tit {
+			// 	@include tit;
+			// }
 
 			.profile {
 				display: flex;
@@ -151,9 +170,9 @@ section {
 	&#skill {
 		.inner {
 
-			.tit {
-				@include tit;
-			}
+			// .tit {
+			// 	@include tit;
+			// }
 
 			.skill_box {
 				display: flex;
@@ -202,9 +221,9 @@ section {
 
 		.inner {
 
-			.tit {
-				@include tit;
-			}
+			// .tit {
+			// 	@include tit;
+			// }
 
 			.item_cont {
 				display: flex;
@@ -372,25 +391,111 @@ section {
 
 // 반응형
 @media screen and (max-width: $web) {
-	section#portfolio .inner .port_box {
+	$inner: 2rem;
 
-		.item_cont {
-			flex-wrap: wrap;
-			max-width: 1000px;
+	section {
+		height: 100%;
 
-			li {
-				width: calc((100% - 4rem) / 2);
+		.inner {
+			padding: $inner;
+
+			.tit {
+				margin-top: 0;
+				@include tit_mo;
+			}
+		}
+
+		&#main {
+			height: 100vh;
+
+			.inner .tit {
+				margin-top: 0;
+
+				h2 {
+					font-size: 3rem;
+
+					b {
+						font-size: 4rem;
+					}
+				}
+
+				.emogi {
+					font-size: 3rem;
+				}
+			}
+		}
+
+		&#about {
+			.inner {
+				.profile {
+					flex-flow: column;
+					margin-top: 7rem;
+					transform: inherit;
+
+					.visual figure {
+						max-width: 30rem;
+						margin-right: 0;
+					}
+
+					.text {
+						max-width: 60rem;
+						margin-top: 4rem;
+						text-align: center;
+
+						p {
+							font-size: 1.8rem;
+
+							&+p {
+								margin-top: 1rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&#skill {
+
+			.inner {
+				.skill_box {
+					flex-wrap: wrap;
+					justify-content: space-between;
+					margin-top: 7rem;
+					max-width: 160rem;
+
+					li {
+						width: calc((100% - 4rem) / 2);
+						margin-right: 0;
+						margin-bottom: 4rem;
+
+						&:nth-of-type(even) {
+							margin-right: 0;
+						}
+
+						&:nth-last-of-type(1) {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+
+		&#portfolio .inner {
+			.item_cont {
+				flex-wrap: wrap;
+				max-width: 1000px;
+
+				li {
+					width: calc((100% - 4rem) / 2);
+				}
 			}
 		}
 	}
 
+
 	.sub section#portfolio .inner {
 		>.tit {
 			margin-top: 0;
-
-			h2 {
-				font-size: 4rem;
-			}
 		}
 
 		.port_box {
@@ -424,12 +529,41 @@ section {
 }
 
 @media screen and (max-width: $mobile) {
-	section#portfolio .inner .port_box .item_cont {
-		flex-flow: column;
-		max-width: 600px;
+	section {
 
-		li {
-			width: 100%;
+		&#skill {
+
+			.inner {
+				.skill_box {
+					li {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&#portfolio {
+			.inner {
+
+				.item_cont {
+					flex-wrap: wrap;
+					max-width: 60rem;
+					margin-top: 0;
+
+					li {
+						width: 100%;
+						margin-top: 4rem;
+					}
+				}
+
+				.btn {
+					margin-top: 4rem;
+				}
+			}
+		}
+
+		&#contact {
+			padding: $inner;
 		}
 	}
 
