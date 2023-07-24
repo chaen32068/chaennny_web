@@ -180,24 +180,34 @@ section {
   width: 100%;
   height: 100vh;
 }
+section .inner {
+  height: 100%;
+  padding: 4rem;
+}
 section#main {
   background: url(../images/sky.png) no-repeat center/cover;
 }
 section#main .inner {
   position: relative;
+  padding: 0;
 }
 section#main .inner .tit {
-  font: 25px/1.5 "Gowun Dodum", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font: 2.5rem/1.5 "Gowun Dodum", sans-serif;
   text-align: center;
 }
 section#main .inner .tit b {
-  margin-right: 5px;
-  font-size: 45px;
+  margin-right: 0.5rem;
+  font-size: 4.5rem;
   color: #e5474b;
 }
 section#main .inner .tit .emogi {
   display: inline-block;
-  font-size: 60px;
+  font-size: 6rem;
   animation: shake 1.2s infinite;
 }
 @keyframes shake {
@@ -211,16 +221,11 @@ section#main .inner .tit .emogi {
     transform: rotate(20deg);
   }
 }
-section#about .inner {
-  padding: 40px;
-}
 section#about .inner .tit {
-  position: absolute;
-  top: 140px;
-  left: 40px;
+  margin-top: 4rem;
 }
 section#about .inner .tit h2 {
-  font: 80px/1 "Carter One", sans-serif;
+  font: 8rem/1 "Carter One", sans-serif;
   color: #ff5900;
 }
 section#about .inner .profile {
@@ -232,112 +237,98 @@ section#about .inner .profile {
 section#about .inner .profile .visual figure {
   overflow: hidden;
   width: 100%;
-  max-width: 400px;
+  max-width: 40rem;
   height: 100%;
-  max-height: 514px;
-  margin-right: 60px;
-  border-radius: 20px;
+  max-height: 51rem;
+  margin-right: 6rem;
+  border-radius: 2rem;
   box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
 }
 section#about .inner .profile .text {
   width: 100%;
-  max-width: 600px;
+  max-width: 60rem;
 }
 section#about .inner .profile .text p {
   word-break: keep-all;
-  font: 24px/2 "Noto Sans KR", sans-serif;
+  font: 2.4rem/2 "Noto Sans KR", sans-serif;
   color: #1a1b1c;
 }
 section#about .inner .profile .text p + p {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 section#about .inner .profile .text .link {
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 section#about .inner .profile .text .link div span {
-  margin-right: 10px;
-  font: bold 18px/1 "Rajdhani", sans-serif;
+  margin-right: 1rem;
+  font: bold 1.8rem/1 "Rajdhani", sans-serif;
   color: #ff5900;
 }
 section#about .inner .profile .text .link div a {
   color: #aaa;
 }
 section#about .inner .profile .text .link div + div {
-  margin-top: 20px;
-}
-section#skill .inner {
-  padding: 40px;
+  margin-top: 2rem;
 }
 section#skill .inner .tit {
-  position: absolute;
-  top: 140px;
-  left: 40px;
+  margin-top: 4rem;
 }
 section#skill .inner .tit h2 {
-  font: 80px/1 "Carter One", sans-serif;
+  font: 8rem/1 "Carter One", sans-serif;
   color: #ff5900;
 }
 section#skill .inner .skill_box {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 180px;
+  max-width: 160rem;
+  margin-top: 14rem;
 }
 section#skill .inner .skill_box li {
-  width: calc((100% - 60px) / 4);
-  height: auto;
-  margin: 0 40px 40px 0;
-  padding: 40px;
-  font: 16px/2.5 "Orbitron", sans-serif;
+  width: calc((100% - 16rem) / 5);
+  margin-right: 4rem;
+  padding: 2rem;
+  font: 1.6rem/2.5 "Orbitron", sans-serif;
   color: #1a1b1c;
   background-color: #fff0d0;
   box-shadow: 3px 7px 10px 3px hsla(21, 100%, 50%, 0.314);
-  border-radius: 20px;
+  border-radius: 2rem;
 }
-section#skill .inner .skill_box li:nth-child(3n), section#skill .inner .skill_box li:nth-child(5n) {
+section#skill .inner .skill_box li:nth-last-child(1) {
   margin-right: 0;
 }
 section#skill .inner .skill_box li i {
-  margin-right: 5px;
-  font-size: 20px;
+  margin-right: 0.5rem;
+  font-size: 2rem;
 }
 section#skill .inner .skill_box li strong {
   color: #222;
 }
 section#skill .inner .skill_box li p {
-  margin-top: 15px;
+  margin-top: 1.5rem;
   font-family: "Noto Sans KR", sans-serif;
   word-break: keep-all;
 }
 section#portfolio {
   background-color: hwb(40 88% 0%/0.557);
 }
-section#portfolio .inner {
-  padding: 40px;
-}
 section#portfolio .inner .tit {
-  position: absolute;
-  top: 140px;
-  left: 40px;
+  margin-top: 4rem;
 }
 section#portfolio .inner .tit h2 {
-  font: 80px/1 "Carter One", sans-serif;
+  font: 8rem/1 "Carter One", sans-serif;
   color: #ff5900;
 }
 section#portfolio .inner .item_cont {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  margin-top: 140px;
+  max-width: 1600px;
+  margin-top: 8rem;
 }
 section#portfolio .inner .item_cont li {
-  width: calc((100% - 60px) / 4);
-  margin-right: 40px;
-}
-section#portfolio .inner .item_cont li:last-of-type {
-  margin-right: 0;
+  width: calc((100% - 8rem) / 3);
 }
 section#portfolio .inner .item_cont li:hover .hover {
   opacity: 0.9;
@@ -346,10 +337,10 @@ section#portfolio .inner .item_cont li a {
   overflow: hidden;
   position: relative;
   display: block;
-  padding: 40px;
+  padding: 4rem;
   color: #1a1b1c;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 2rem;
   cursor: pointer;
 }
 section#portfolio .inner .item_cont li a figure img {
@@ -371,29 +362,29 @@ section#portfolio .inner .item_cont li a .hover {
   background-color: rgba(46, 46, 46, 0.8823529412);
   transition: all 0.3s;
 }
-section#portfolio .inner .item_cont li a .hover .inner h4 {
-  margin-bottom: 30px;
-  font: bold 26px/1 "Noto Sans KR", sans-serif;
+section#portfolio .inner .item_cont li a .hover .item_inner h4 {
+  margin-bottom: 3rem;
+  font: bold 2.6rem/1 "Noto Sans KR", sans-serif;
 }
-section#portfolio .inner .item_cont li a .hover .inner h4 span {
+section#portfolio .inner .item_cont li a .hover .item_inner h4 span {
   display: block;
-  font: normal 18px/1 "Noto Sans KR", sans-serif;
-  margin-bottom: 10px;
+  font: normal 1.8rem/1 "Noto Sans KR", sans-serif;
+  margin-bottom: 1rem;
 }
 section#portfolio .inner .item_cont .txt {
-  margin-top: 20px;
-  font: 18px/1 "Noto Sans KR", sans-serif;
+  margin-top: 2rem;
+  font: 1.8rem/1 "Noto Sans KR", sans-serif;
   text-align: center;
   color: rgba(46, 46, 46, 0.8823529412);
 }
 section#portfolio .inner .btn {
-  margin-top: 80px;
+  margin-top: 8rem;
   text-align: center;
 }
 section#portfolio .inner .btn a {
   display: inline-block;
-  padding: 20px 40px;
-  font: bold 20px/1 "Rajdhani", sans-serif;
+  padding: 2rem 4rem;
+  font: bold 2rem/1 "Rajdhani", sans-serif;
   color: #fff;
   background-color: #ff5900;
   border-radius: 10px;
@@ -411,66 +402,106 @@ section#portfolio .inner .btn a:hover {
   position: static;
 }
 .sub section#portfolio .inner .port_box {
-  margin-top: 140px;
+  margin-top: 8rem;
 }
 .sub section#portfolio .inner .port_box > .tit h3 {
   display: inline-block;
-  padding: 7px 5px;
-  font: 28px/1 "Noto Sans KR", sans-serif;
+  padding: 0.7rem 0.5rem;
+  font: 2.8rem/1 "Noto Sans KR", sans-serif;
   border-top: 2px solid #ff5900;
   border-bottom: 2px solid #ff5900;
 }
 .sub section#portfolio .inner .port_box .item_cont {
-  justify-content: flex-start;
-  margin-top: 40px;
+  margin-top: 4rem;
 }
 .sub section#portfolio .inner .port_box .item_cont li {
-  width: calc((100% - 120px) / 3);
-  margin: 0 40px 40px 0;
+  margin-bottom: 4rem;
 }
-.sub section#portfolio .inner .port_box .item_cont li:nth-of-type(3n) {
-  margin-right: 0;
+.sub section#portfolio .inner .port_box .item_cont li .hover .item_inner h5 {
+  margin-bottom: 3rem;
+  font: bold 2.6rem/1 "Noto Sans KR", sans-serif;
 }
-.sub section#portfolio .inner .port_box .item_cont li .hover .inner h5 {
-  margin-bottom: 30px;
-  font: bold 26px/1 "Noto Sans KR", sans-serif;
-}
-.sub section#portfolio .inner .port_box .item_cont li .hover .inner h5 span {
+.sub section#portfolio .inner .port_box .item_cont li .hover .item_inner h5 span {
   display: block;
-  font: normal 18px/1 "Noto Sans KR", sans-serif;
-  margin-bottom: 10px;
+  font: normal 1.8rem/1 "Noto Sans KR", sans-serif;
+  margin-bottom: 1rem;
 }
 .sub section#portfolio .inner .port_box .pj {
-  margin-top: 60px;
+  margin-top: 6rem;
 }
 .sub section#portfolio .inner .port_box .pj + .pj {
-  margin-top: 120px;
+  margin-top: 12rem;
 }
 .sub section#portfolio .inner .port_box .pj .tit h4 {
   display: inline-block;
-  font: 24px/1 "Noto Sans KR", sans-serif;
+  font: 2.4rem/1 "Noto Sans KR", sans-serif;
 }
 .sub section#portfolio .inner .port_box .pj .tit h4 i {
   color: #ff5900;
 }
-.sub section#portfolio .inner .port_box .pj .item_cont li .hover .inner h5 {
-  margin-bottom: 30px;
-  font: bold 26px/1 "Noto Sans KR", sans-serif;
+.sub section#portfolio .inner .port_box .pj .item_cont li .hover .item_inner h5 {
+  margin-bottom: 3rem;
+  font: bold 2.6rem/1 "Noto Sans KR", sans-serif;
 }
-.sub section#portfolio .inner .port_box .pj .item_cont li .hover .inner h5 span {
+.sub section#portfolio .inner .port_box .pj .item_cont li .hover .item_inner h5 span {
   display: block;
-  font: normal 18px/1 "Noto Sans KR", sans-serif;
-  margin-bottom: 10px;
+  font: normal 1.8rem/1 "Noto Sans KR", sans-serif;
+  margin-bottom: 1rem;
 }
 
+@media screen and (max-width: 1200px) {
+  section#portfolio .inner .port_box .item_cont {
+    flex-wrap: wrap;
+    max-width: 1000px;
+  }
+  section#portfolio .inner .port_box .item_cont li {
+    width: calc((100% - 4rem) / 2);
+  }
+  .sub section#portfolio .inner > .tit {
+    margin-top: 0;
+  }
+  .sub section#portfolio .inner > .tit h2 {
+    font-size: 4rem;
+  }
+  .sub section#portfolio .inner .port_box {
+    margin-top: 0;
+  }
+  .sub section#portfolio .inner .port_box .tit h3 {
+    font-size: 1.8rem;
+  }
+  .sub section#portfolio .inner .port_box .pj {
+    margin-top: 0;
+  }
+  .sub section#portfolio .inner .port_box .pj .tit h4 {
+    font-size: 1.6rem;
+  }
+  .sub section#portfolio .inner .port_box .pj .item_cont {
+    margin-top: 2rem;
+  }
+  .sub section#portfolio .inner .port_box .pj + .pj {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 640px) {
+  section#portfolio .inner .port_box .item_cont {
+    flex-flow: column;
+    max-width: 600px;
+  }
+  section#portfolio .inner .port_box .item_cont li {
+    width: 100%;
+  }
+  .sub section#portfolio .inner {
+    padding: 2rem;
+  }
+}
 section#contact {
   height: auto !important;
   padding: 0 !important;
   text-align: center;
-  background-color: #ff4500;
+  background-color: rgba(255, 68, 0, 0.552);
 }
 section#contact .fp-tableCell {
-  padding: 40px;
+  padding: 4rem;
   height: auto !important;
 }
 section#contact h4 {
@@ -507,6 +538,10 @@ section#contact .mail {
 #top#top.on {
   right: 3%;
   opacity: 1;
+}
+
+html {
+  font-size: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
