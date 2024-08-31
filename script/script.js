@@ -1,21 +1,8 @@
 //모바일에서 비활성화 하기위한 플러그인
 var md = new MobileDetect(window.navigator.userAgent);
 
-// header 스크롤 이벤트
-window.onscroll = function () {
-  let cont = document.querySelector("#about").getBoundingClientRect().top;
-  let header = document.querySelector("header");
-  let headerHeight = header.offsetHeight;
-
-  if (cont <= headerHeight) {
-    header.classList.add("on");
-  } else {
-    header.classList.remove("on");
-  }
-};
 
 if (!md.mobile()) {
-
   new fullpage("#fullpage", {
     //이동
     lockAnchors: true,
@@ -92,11 +79,25 @@ if (!md.mobile()) {
 }
 
 
-//top button
-$("#top").on("click", function () {
-  $("html,body").stop().animate({
-      scrollTop: 0,
-    },
-    500
-  );
+//스크롤 이벤트
+document.addEventListener("DOMContentLoaded", function () {
+  var topButton = document.querySelector("#top");
+  var topButtonLink = topButton.querySelector("a");
+
+  topButtonLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  // 스크롤 이벤트 리스너를 추가
+  window.addEventListener("scroll", function () {
+    if (window.scrollY === 0) {
+      topButton.style.opacity = "0";
+    } else {
+      topButton.style.opacity = "1";
+    }
+  });
 });
