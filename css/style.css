@@ -341,6 +341,7 @@ section#portfolio .inner .item_cont li a {
   padding: 4rem;
   color: #1a1b1c;
   background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 2rem;
   cursor: pointer;
 }
@@ -588,6 +589,7 @@ section#contact .mail {
   width: 50px;
   height: 50px;
   transition: all 0.6s;
+  opacity: 0;
   z-index: 99;
 }
 #top a {
