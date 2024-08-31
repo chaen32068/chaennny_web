@@ -1,3 +1,4 @@
+//모바일에서 비활성화 하기위한 플러그인
 var md = new MobileDetect(window.navigator.userAgent);
 
 // header 스크롤 이벤트
