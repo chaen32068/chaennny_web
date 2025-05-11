@@ -897,13 +897,19 @@ footer .bottom .sns li {
     }
 
     .visual .svgAni {
+        position: static;
         width: 85%;
-        right: 3%;
+        /* right: 3%; */
+        text-align: center;
     }
 
     .visual .scroll {
         left: 5%;
         bottom: 2%;
+    }
+
+    .visual .mainText {
+        margin: 0px 0px 50px 60px;
     }
 
     .con02 .workList li {
@@ -986,7 +992,7 @@ footer .bottom .sns li {
     }
 
     .visual .mainText {
-        margin: 0px 0px 150px 25px
+        /* margin: 0px 0px 150px 25px */
     }
 
     .visual .svgAni {
