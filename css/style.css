@@ -915,6 +915,7 @@ footer .bottom .sns li {
         /* position: static; */
         /* width: 85%; */
         /* right: 3%; */
+        width: 250px;
         text-align: center;
     }
 
