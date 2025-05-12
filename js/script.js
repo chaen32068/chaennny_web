@@ -160,4 +160,11 @@ $(function () {
     $(this).toggleClass("on");
     $("body").toggleClass("on");
   });
+
+  // GNB 메뉴 링크 클릭 시 메뉴 닫기
+  $(".gnb a").on("click", function () {
+    $(".gnb").removeClass("on");
+    $(".menuOpen").removeClass("on");
+    $("body").removeClass("on");
+  });
 });
