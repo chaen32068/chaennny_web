@@ -250,10 +250,14 @@ header .menuOpen {
     position: absolute;
     right: 2%;
     bottom: 9%;
-    width: 55%;
+    width: 100%;
+    max-width: 300px;
     /* transform: rotate(-10deg); */
 }
 
+.visual .svgAni img {
+    width: 100%;
+}
 
 
 /* animation */
@@ -665,7 +669,7 @@ footer .textWrap {
 }
 
 footer .textWrap a {
-    font-size: 9vw;
+    font-size: 7vw;
 }
 
 footer .textWrap .title {
@@ -728,7 +732,7 @@ footer .bottom .sns li {
     }
 
     .visual .svgAni {
-        width: 56%;
+        /* width: 56%; */
         /* bottom: 39% */
     }
 
@@ -897,8 +901,8 @@ footer .bottom .sns li {
     }
 
     .visual .svgAni {
-        position: static;
-        width: 85%;
+        /* position: static; */
+        /* width: 85%; */
         /* right: 3%; */
         text-align: center;
     }
@@ -996,9 +1000,9 @@ footer .bottom .sns li {
     }
 
     .visual .svgAni {
-        width: 100%;
+        /* width: 100%; */
         right: 1%;
-        top: 30%;
+        bottom: 30%;
     }
 
     .visual .subText {
