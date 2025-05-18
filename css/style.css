@@ -140,7 +140,6 @@ header {
     justify-content: space-between;
 }
 
-
 header.active {
     transform: translateY(-100%);
 }
@@ -193,7 +192,7 @@ header .menuOpen {
 }
 
 .char:after {
-    color: blue
+    color: blue;
 }
 
 .gnb ul li a .char:before {
@@ -209,7 +208,6 @@ header .menuOpen {
     transform: translateY(-100%);
 }
 
-
 /* visual */
 .visual {
     width: 100%;
@@ -220,7 +218,6 @@ header .menuOpen {
     letter-spacing: -1px;
 }
 
-
 .visual .mainText {
     font-size: 140px;
     font-weight: 400;
@@ -229,13 +226,15 @@ header .menuOpen {
     display: inline-block;
 }
 
-/*  display: inline-block; */
 .visual .mainText p {
     overflow: hidden;
 }
 
 .visual .subText {
     margin-left: 20%;
+    padding-right: 20px;
+    word-break: keep-all;
+    box-sizing: border-box;
 }
 
 .visual .scroll {
@@ -252,7 +251,6 @@ header .menuOpen {
     bottom: 9%;
     width: 100%;
     max-width: 300px;
-    /* transform: rotate(-10deg); */
 }
 
 .visual .svgAni img {
@@ -269,7 +267,6 @@ header .menuOpen {
         opacity: 1;
     }
 }
-
 
 /* animation */
 .visual.motion .mainText {
@@ -318,70 +315,44 @@ header .menuOpen {
     animation-duration: 2.3s;
 }
 
-/* svg모션 */
-.visual.motion #svgAni01 {
-    stroke-dasharray: 675;
-    stroke-dashoffset: 675;
-    animation: ani1 .5s linear 2s forwards;
+/* character 섹션 스타일 */
+.character {
+    height: 100vh;
+    position: relative;
 }
 
-.visual.motion #svgAni03 {
-    stroke-dasharray: 3059;
-    stroke-dashoffset: 3059;
-    animation: ani3 2s linear .1s forwards;
+.character p.img {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.visual.motion #svgAni04 {
-    stroke-dasharray: 66;
-    stroke-dashoffset: 66;
-    animation: ani4 .2s linear 1s forwards;
+.character p.img img {
+    width: 100%;
 }
 
-.visual.motion #svgAni05 {
-    stroke-dasharray: 55;
-    stroke-dashoffset: 55;
-    animation: ani5 .2s linear 0s forwards;
+.character .stage {
+    height: 100%;
+    background-image: url(../images/img_3.png);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    max-width: 200px;
+    margin: 0 auto;
 }
 
+@keyframes animate {
 
-
-@keyframes ani1 {
-    0% {
-        stroke-dashoffset: 675;
-    }
-
+    0%,
     100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes ani3 {
-    0% {
-        stroke-dashoffset: 3059;
+        clip-path: polygon(0% 56%, 8% 63%, 20% 59%, 33% 62%, 52% 59%, 66% 57%, 78% 64%, 90% 58%, 100% 65%, 100% 99%, 0% 100%);
     }
 
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes ani4 {
-    0% {
-        stroke-dashoffset: 64;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
-    }
-}
-
-@keyframes ani5 {
-    0% {
-        stroke-dashoffset: 55;
-    }
-
-    100% {
-        stroke-dashoffset: 0;
+    50% {
+        clip-path: polygon(0% 56%, 10% 58%, 21% 66%, 35% 57%, 52% 56%, 63% 69%, 75% 56%, 89% 52%, 100% 65%, 100% 99%, 0% 100%);
     }
 }
 
@@ -415,7 +386,6 @@ header .menuOpen {
     font-size: 80px;
     font-weight: 400;
     letter-spacing: -1px;
-    line-height: 1.2;
 }
 
 /* section.con02 */
@@ -461,7 +431,7 @@ header .menuOpen {
 .con02 .workList li a .textBox h3 {
     font-size: 35px;
     font-weight: normal;
-    margin: 20px 0 5px
+    margin: 20px 0 5px;
 }
 
 .con02 .workList li a .textBox .info {
@@ -508,7 +478,6 @@ header .menuOpen {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-
 
 @keyframes spin {
     0% {
@@ -693,7 +662,6 @@ footer .textWrap .contact {
     margin-bottom: 10px;
 }
 
-
 footer .textWrap a {
     display: block;
     margin-top: -30px;
@@ -743,23 +711,46 @@ footer .bottom .sns li {
     }
 
     .visual .svgAni {
-        /* width: 56%; */
-        /* bottom: 39% */
+        width: 76%;
+        bottom: 10%;
+        right: 1%;
     }
 
     .visual .subText {
-        margin-left: 0;
-        width: 100%;
-        padding: 0 5%;
-        box-sizing: border-box;
-        position: absolute;
-        left: 0;
-        bottom: 8%;
+        bottom: -8%;
     }
 
-    /* footer .textWrap a {
-        font-size: 144px;
-    } */
+    .con01 .title h2 {
+        font-size: 7vw;
+    }
+
+    .con02 .title {
+        font-size: 18vw;
+    }
+
+    .con02 .workList {
+        width: 90%;
+    }
+
+    .con03 .textWrap {
+        width: 85%;
+    }
+
+    .con03 .textWrap ul li {
+        font-size: 12vw;
+    }
+
+    footer .textWrap {
+        font-size: 12vw;
+    }
+
+    footer .textWrap a {
+        font-size: 8vw;
+    }
+
+    footer .bottom {
+        font-size: 20px;
+    }
 }
 
 /* 1024px~801px */
@@ -903,18 +894,15 @@ footer .bottom .sns li {
 
     header .menuOpen.on span.a {
         background: #000;
-        transform: rotate(45deg)translate(5px, 5px);
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     header .menuOpen.on span.b {
         background: #000;
-        transform: rotate(-45deg)translate(2px, -1px);
+        transform: rotate(-45deg) translate(2px, -1px);
     }
 
     .visual .svgAni {
-        /* position: static; */
-        /* width: 85%; */
-        /* right: 3%; */
         width: 250px;
         text-align: center;
     }
@@ -969,7 +957,7 @@ footer .bottom .sns li {
     }
 
     .con03.motion .simply-scroll .simply-scroll-clip {
-        transform: rotate(10deg) translate(20%, 400px) scale(1.2)
+        transform: rotate(10deg) translate(20%, 400px) scale(1.2);
     }
 
     .simply-scroll .simply-scroll-clip .simply-scroll-list li {
@@ -1003,18 +991,22 @@ footer .bottom .sns li {
         display: none;
     }
 
+    .character p.img {
+        display: none;
+    }
+
     .visual {
         padding-top: 100px;
     }
 
     .visual .mainText {
-        /* margin: 0px 0px 150px 25px */
+        margin: 0px 0px 50px 25px
     }
 
     .visual .svgAni {
-        /* width: 100%; */
-        right: 1%;
-        bottom: 250px;
+        right: 50%;
+        bottom: -50px;
+        transform: translateX(50%);
     }
 
     .visual .subText {
