@@ -20,7 +20,7 @@ $(function () {
   });
 });
 
-//03.scrolla.js
+// scrolla.js
 $(function () {
   $(".animate").scrolla({
     moblie: true,
@@ -37,7 +37,7 @@ $(function () {
     });
 });
 
-// .con01 gsap 애니메이션
+// gsap 애니메이션
 $(function () {
   gsap
     .timeline({
@@ -63,7 +63,6 @@ $(function () {
       0
     );
 
-  //.con02 gsap animation
   //title글자애니메이션
   gsap
     .timeline({
@@ -167,4 +166,31 @@ $(function () {
     $(".menuOpen").removeClass("on");
     $("body").removeClass("on");
   });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".visual .mainText", {
+  scrollTrigger: {
+    trigger: ".visual",
+    start: "top center",
+    end: "bottom center",
+    scrub: true,
+  },
+  y: 100,
+  opacity: 0,
+  duration: 1.5,
+  stagger: 0.2,
+});
+
+gsap.from(".visual .subText", {
+  scrollTrigger: {
+    trigger: ".visual",
+    start: "top center",
+    end: "bottom center",
+    scrub: true,
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1.5,
 });
