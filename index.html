@@ -281,6 +281,18 @@
                 //markers:true
             },
         });
+
+        // svgAni 애니메이션 추가
+        gsap.from(".svgAni", {
+            opacity: 0,
+            duration: 1,
+            y: 50,
+            scrollTrigger: {
+                trigger: ".svgAni",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
     </script>
 </body>
 
